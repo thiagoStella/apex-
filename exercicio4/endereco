@@ -1,0 +1,70 @@
+public class Endereco {
+	private String logradouro;
+    private String nome;
+    private String numero;
+    private String complemento;
+    private String cep;
+    private String cidade;
+    private String estado;
+
+
+	// encapsulamento
+	public String getLogradouro(){
+      return logradouro;
+    }
+    public void setLogradouro(){
+      this.logradouro = logradouro;
+    }
+	public String getNome(){
+      return nome;
+    }
+    public void setNome(){
+      this.nome = nome;
+    }
+	public String getNumero(){
+      return numero;
+    }
+    public void setNumero(){
+      this.numero = numero;
+    }
+	public String getComplemento(){
+      return complemento;
+    }
+    public void setComplemento(){
+      this.complemento = complemento;
+    }
+	public String getCep(){
+      return cep;
+    }
+    public void setCep(){
+      this.cep = cep;
+    }
+	public String getCidade(){
+      return cidade;
+    }
+    public void setCidade(){
+      this.cidade = cidade;
+    }
+	public String getEstado(){
+      return estado;
+    }
+    public void setEstado(){
+      this.estado = estado;
+    }
+
+	//methods
+	public void exibirEndereco(){
+    	System.debug(logradouro + '.' + nome + ',' + numero + 'comp.: ' + complemento
+                    + '-' +  cep.substring(0, 5) + '-' + cep.substring(6, 8) + '-' + cidade + '-' + estado);
+	}
+		
+    // contructors
+    public Endereco () {
+
+    }
+    public Endereco (String codPais, String ddd, String num) {
+		this.nome = nome;
+        this.numero = numero;
+        this.cidade = cidade;
+    }
+}
