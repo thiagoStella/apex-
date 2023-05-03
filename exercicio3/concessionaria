@@ -1,0 +1,24 @@
+public class Concessionaria {
+    public List<Funcionario> funcionarios = new List<Funcionario>();
+    public List<Veiculo> veiculos = new List<Veiculo>();
+
+    public void novoFuncionario(Integer matricula, String nome, String cpf){
+       Funcionario func = new Funcionario(matricula,nome,cpf); 
+       funcionarios.add(func);
+    }
+    public void novoVeiculo(String placa, String marca, String modelo){
+		Veiculo veic = new Veiculo(placa,modelo,marca);        
+        veiculos.add(veic);
+    }
+    public void listarFuncionarios(){
+        for(Funcionario func : funcionarios){
+          System.debug('Funcionário: ' + func.nome);
+          System.debug('Matricula: ' + func.matricula);              
+        }
+    }
+    public void listarVeiculos(){
+        for(Veiculo veic: veiculos){
+            System.debug('Veiculo: ' + veic.modelo);
+        }
+    }
+}
